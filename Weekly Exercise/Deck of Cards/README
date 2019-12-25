@@ -1,0 +1,39 @@
+Name: Jenish Patel
+ID #: 1572027
+CMPUT 274 FALL 2019
+
+Weekly Assignment: Deck of Cards
+
+Included Files:
+	* deck.py
+	* README
+
+Accessories:
+	* None needed
+
+Wiring instructions: 
+	* None needed
+
+Running instructions:
+	Open the deck.py python file to view the code for this week's assignment. 
+
+General overiew:
+	The purpose of this program is the use classes to create real life scenarios. This program will simulate a card game, and a class is create in which there an object deck (deck of 'cards') can be instantiate.
+
+	The class will create a deck object with attribute containing the cards and a three properties which will deal(), validate, str()
+		* deal() will deal the first card (top) from the deck.
+		* validate() makes msure that the deck is valid deck by checking for:
+			- invalid cards
+			- duplicate cards
+			- number of cards in the deck
+		* str() will return a custom string containing all cards of the valid deck.
+
+	Upon a problem with the deck, an error message is returned and the program is terminated.
+
+Getting outputs:
+	To obtain outputs from the program. Open the terminal and navigate to the directory where the text file is located. Enter the filename in the command line as the second argument after the program name. After execution of the following steps, a file will be added to your current directory which contains the outcome of the program.
+
+Assumptions:
+	* The input file exist in the directory where the program file is launched from.
+	* The input file is a text file.
+	* The text file contains only two characters per line. ('\n' and '' will be taken care of)

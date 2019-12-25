@@ -1,0 +1,44 @@
+Name: Jenish Patel
+ID #: 1572027
+CMPUT 274 FALL 2019
+
+Weekly Assignment: Counting lights
+
+Included Files:
+	* counting.cpp
+	* MAKEFILE
+	* README
+
+Accessories:
+	* Arduino Mega Board (AMG)
+	* 330 Ohm resistor
+	* LED
+	* Push button
+	* Wires
+
+Wiring instructions: 
+	* Arduino 5V <--> Breadboard 5V
+	* Arduino GNU <--> Breadboard GNU
+	* Ardiuno Pin 13 <--> Longer LED lead |LED| shorted LED lead <--> Breadboard GNU
+	* Ardiuno Pin 12 <--> Longer LED lead |LED| shorted LED lead <--> Breadboard GNU
+	* Ardiuno Pin 11 <--> Longer LED lead |LED| shorted LED lead <--> Breadboard GNU
+	* Ardiuno Pin 10 <--> Longer LED lead |LED| shorted LED lead <--> Breadboard GNU
+	* Ardiuno Pin  9 <--> Longer LED lead |LED| shorted LED lead <--> Breadboard GNU
+	* Ardiuno Pin  7 <--> push button lead |Push Button| push push button lead <--> Breadboard GNU
+	* Ardiuno Pin  6 <--> push button lead |Push Button| push push button lead <--> Breadboard GNU
+	* Ardiuno Pin  5 <--> push button lead |Push Button| push push button lead <--> Breadboard GNU
+
+Running instructions:
+	1. Connect the Ardiuno to PC using an USB. Make sure that the Ardunio is using the proper serial
+	port (/dev/ttuACMO or -ACM1)
+
+	2. In the directory containing the files counting.cpp and makefile, use the command "make upload && serial-mon" to upload the code to the Arduino
+
+General overiew:
+	The purpose of the program is to enable the user to use the push buttons to light up the LEDs. Each push button has its own purpose:
+		increment button: projects an increasing sequence of binary bits through the 5 leds.
+		decrement button: projects an decreasing sequence of binary bits through the 5 leds.
+		memory button: stores the current state of the LEDs and if pressed again, it recovers the stored state and displays it.
+
+Assumptions:
+	- Pressing the push button too fast may cause unexpected results.

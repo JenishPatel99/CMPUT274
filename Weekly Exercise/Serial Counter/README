@@ -1,0 +1,44 @@
+Name: Jenish Patel
+ID #: 1572027
+CMPUT 274 FALL 2019
+
+Weekly Assignment: Serial Monitor
+
+Included Files:
+	* serial_counter.cpp
+	* MAKEFILE
+	* README
+
+Accessories:
+	* Arduino Mega Board (AMG)
+	* 330 Ohm resistor
+	* LED
+	* Push button
+	* Wires
+
+Wiring instructions: 
+	* Arduino 5V <--> Breadboard 5V
+	* Arduino GNU <--> Breadboard GNU
+	* Ardiuno Pin 13 <--> Longer LED lead |LED| shorted LED lead <--> Breadboard GNU
+	* Ardiuno Pin 12 <--> Longer LED lead |LED| shorted LED lead <--> Breadboard GNU
+	* Ardiuno Pin 11 <--> Longer LED lead |LED| shorted LED lead <--> Breadboard GNU
+	* Ardiuno Pin 10 <--> Longer LED lead |LED| shorted LED lead <--> Breadboard GNU
+	* Ardiuno Pin  9 <--> Longer LED lead |LED| shorted LED lead <--> Breadboard GNU
+
+Running instructions:
+	1. Connect the Ardiuno to PC using an USB. Make sure that the Ardunio is using the proper serial
+	port (/dev/ttuACMO or -ACM1)
+
+	2. In the directory containing the files counting.cpp and makefile, use the command "make upload " to upload the code to the Arduino.
+
+	3. To access the serial monitor, type "serial-mon" in the command line. Once the serial monitor is opened you may type characters from the keyboard.
+
+
+General overiew:
+	The purpose of this program is to let the user interact with the serial monitor. In layman's terms the user will be able to accumulate the a total and the value of the total will be represented by a 8 bit binary done using the five led's on a breadboard. For example, if the total is 10. then the binary equivalent (8 bits) is 0000 1010. However in this project we are restricted to only 5 leds, thus a 5 bit binary code (decimal value from 0-31). The array of LEDs will showcase the 5 bit binary code. When a bit is 1 then the LED is on and when the bit is 0, the LED is off.
+
+	The user can type values in the Hexadecimal domain to increment the total. A-F (in lower case as well) will represent values from 10-15. To reset the total to 0, the user can press the space bar or the enter key.
+
+Assumptions and extra guidelines:
+	- There is no protection for the user to press and hold a key and not have the counter increase rapidly. I assume that user will not need to perform such a task.
+	- A message will pop up in the serial-mon that will alert the user that a forbidden key has been pressed and the total will not change.

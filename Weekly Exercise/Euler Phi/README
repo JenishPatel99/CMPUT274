@@ -1,0 +1,41 @@
+Name: Mattheas Jamieson, Jenish Patel
+ID #: <*******>, 1572027
+CMPUT 274 FALL 2019
+
+Weekly Assignment: Encrypted communication
+
+Included Files:
+	* encrypted_communication_part1.cpp
+	* Makefile
+	* README
+
+Accessories:
+	* 2 Arduino Mega Board (AMG)
+	* 330 Ohm resistor
+	* Wires
+
+Wiring instructions: 
+	* Arduino (Server) 5V <--> Breadboard 5V
+	* Ardiuno Pin 13 <--> 330 Ohms <--> Breadboard 5V
+
+	* Arduino (Client) GND <--> Breadboard GND
+	* Ardiuno Pin 13 <--> 330 Ohms <--> Breadboard GND
+
+	* Arduino (Server) TX3 <--> Arduino (Client) RX3
+	* Arduino (Server) RX3 <--> Arduino (Client) TX3
+
+Running instructions:
+	1. Connect the Ardiuno (Server) and Arduino (Client) to PC using the USB cables. Make sure that the Ardunio is using the proper serial port (/dev/ttuACMO or -ACM1) for both Arduinos. Select one of them to be "Arduino 0" and other to be "Arduino 1" by typing 1 and then 2 or vice versa. 
+
+	2. In the directory containing the files encrypted_communication_part1.cpp and Makefile, use the command "make upload-0" and "make upload-1" to upload the code to the Arduinos. You may want to open two terminalw which are in the same directory and perform make - make upload - serial mon for both Arduinos.  
+
+	3. To access the serial monitors of arduino 0 and arduino 1, type "serial-mon-0" and "serial-mon-1" respectively in the command line. Once the serial monitors are opened you may type characters from the keyboard.
+
+	4. The program is configured in such way that if the user enters the carriage return then it will send a new-line feed character to the other Arduino and vice-versa.
+
+
+General overiew:
+	The purpose of the program is simulate a chat program between two Arduinos. Using inputs from the serial monitors of the Arduinos, the program will send the message to the each of the Arduino and also print it onto to its corresponding serial monitor. However, the message sent and recieve will be encrypted and decrypted respectively. The encryption and decryption scheme apply to this program is following the concept of RSA cryptosystem.
+
+Assumptions and extra guidelines:
+	- We expect that user does not type two character exactly at the same time, usually this does not happen frequently, but can sometimes misintepret or misread the entered character.

@@ -1,0 +1,39 @@
+Name: Jenish Patel
+ID #: 1572027
+CMPUT 274 FALL 2019
+
+Weekly Assignment: Unfair Dice
+
+Included Files:
+	* unfairDice.py
+	* README
+
+Accessories:
+	* None needed
+
+Wiring instructions: 
+	* None needed
+
+Running instructions:
+	Open the unfairDice.py python file to view the code for this week's assignment. 
+
+General overiew:
+	The purpose of this program is divided into two sectons. The first section will
+	return a list containing the outcomes of each time a dice (unfair dice) is rolled. The second second section will take the list and then represent a histogram of how frequent each outcome occurs. Objectives that are covered in the section is the use of functions, modules involving random module and the seed method. 
+
+Getting outputs:
+	To obtain outputs from the program. Open the terminal and navigate to the directory where the python file is located. Then using the python interpreter
+	import the two functions:
+		* biased_rolls
+			- The arguements are as following biased_rolls(prob_list, s, n)
+			  prob_list is the probability of each outcome of a dice. The 's' is the seed value and n is number of times the dice is rolled. A list will be output containing the outcomes of each roll.
+		* draw_histogram
+			- The arguements are as following draw_histogram(m,rolls,width)
+			  m is the number of faces on the dice. Rolls is the list obtained from biased_rolls and the width is the how scaled the user wants the histogram to be. A printed version of a histogram should appear on the terminal.
+
+Assumptions:
+	* The biased die will always have greater than 2 faces (sides)
+	* The elements of prob_list will add up to 1.
+	* The values in the prob_list will be passed in as floating numbers in the range from 0 - 1
+	* The values in prob_list will be passed in such way that the first element (zeroth index) of prob_list will indicate side 1. For example, prob_list = [0.1,0.2]; the first element refers to side 1 on the dice.
+	
